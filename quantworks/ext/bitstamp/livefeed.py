@@ -55,8 +55,8 @@ class TradeBar(bar.Bar):
     def getTradeId(self):
         return self.__tradeId
 
-    def getInterval(self):
-        return bar.Interval.TRADE
+    def getFrequency(self):
+        return bar.Frequency.TRADE
 
     def getDateTime(self):
         return self.__dateTime
@@ -111,7 +111,7 @@ class LiveTradeFeed(barfeed.BaseBarFeed):
     QUEUE_TIMEOUT = 0.01
 
     def __init__(self, maxLen=None):
-        super(LiveTradeFeed, self).__init__(bar.Interval.TRADE, maxLen)
+        super(LiveTradeFeed, self).__init__(bar.Frequency.TRADE, maxLen)
         self.__barDicts = []
         self.registerInstrument(common.btc_symbol)
         self.__prevTradeDateTime = None

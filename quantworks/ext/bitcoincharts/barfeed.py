@@ -76,8 +76,8 @@ class TradeBar(bar.Bar):
     def getAdjClose(self):
         return None
 
-    def getInterval(self):
-        return bar.Interval.TRADE
+    def getFrequency(self):
+        return bar.Frequency.TRADE
 
     def getPrice(self):
         return self.__price
@@ -147,7 +147,7 @@ class CSVTradeFeed(csvfeed.BarFeed):
     """
 
     def __init__(self, timezone=None, maxLen=None):
-        super(CSVTradeFeed, self).__init__(barfeed.Interval.TRADE, maxLen)
+        super(CSVTradeFeed, self).__init__(barfeed.Frequency.TRADE, maxLen)
         self.__timezone = timezone
         self.__unixTimeFix = UnixTimeFix()
 

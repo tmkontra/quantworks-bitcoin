@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "quantworks-bitcoin"
-version = "1.0rc0"
+version = "1.0"
 description = "Bitcoin integrations for quantworks"
 authors = ["ttymck <tyler@tylerkontra.com>"]
 license = "Apache-2.0"
@@ -13,7 +13,7 @@ exclude = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-quantworks = {version = "==0.21rc2", allow-prereleases = true}
+quantworks = {version = "==0.21", allow-prereleases = true}
 six = "^1.13.0"
 requests = "^2.22.0"
 
